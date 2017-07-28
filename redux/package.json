@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-react": "^6.24.1",
+    "http-server": "^0.10.0",
+    "immutable": "^3.8.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "webpack": "^3.4.1"
+  },
+  "scripts": {
+    "build:dev": "webpack -d --watch",
+    "run": "http-server -p 8080 resources/public"
+  }
+}
