@@ -1,5 +1,5 @@
 import {regReducer} from '../../core';
 
-regReducer('counter_inc', (state, action) =>
-    state.updateIn(['counter', action.id], v => ++v || 1)
+regReducer('counter_inc', (state, {id}) =>
+    state.updateIn(['counter', id], v => ++v || 1)
 );
