@@ -1,9 +1,5 @@
-function counterInc(state, action) {
-    if (action.type !== 'counter_inc') {
-        return state;
-    }
+import {regReducer} from '../../core';
 
-    return state.updateIn(['counter', action.id], v => ++v || 1);
-}
-
-export {counterInc as reducer};
+regReducer('counter_inc', (state, action) =>
+    state.updateIn(['counter', action.id], v => ++v || 1)
+);

@@ -1,5 +1,5 @@
 import {createStore} from 'redux';
-import {reducer} from './reducer';
+import {reducer} from './core';
 import {Map} from 'immutable';
 import * as React from 'react';
 import {render} from 'react-dom';
