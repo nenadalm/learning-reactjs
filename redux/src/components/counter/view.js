@@ -7,7 +7,7 @@ export const Counter = connect(
     (state, ownProps) => {
         return {
             id: ownProps.id,
-            counter: s.counter(state, id),
+            counter: s.counter(state, ownProps.id),
         };
     },
     (dispatch, ownProps) => {
