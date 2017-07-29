@@ -9,7 +9,7 @@
   [:button
    {:type "button"
     :on-click #(dispatch [:counter-inc id])}
-   (str id ": ") @(subscribe [:counter id])])
+   id ": " @(subscribe [:counter id])])
 
 (defn stateful-counter []
   (let [count (atom 0)]
