@@ -1,20 +1,13 @@
 import './reducer';
 import * as React from 'react';
 import {connect} from 'react-redux';
-
-function _Counter({id, counter, onCounterClick}) {
-    return (
-        <button onClick={onCounterClick}>
-            {id}: {counter || 0}
-        </button>
-    );
-}
+import * as s from './selector';
 
 export const Counter = connect(
     (state, ownProps) => {
         return {
             id: ownProps.id,
-            counter: state.getIn(['counter', ownProps.id]),
+            counter: s.counter(state, id),
         };
     },
     (dispatch, ownProps) => {
@@ -24,7 +17,13 @@ export const Counter = connect(
             },
         };
     }
-)(_Counter);
+)(({id, counter, onCounterClick}) => {
+    return (
+        <button onClick={onCounterClick}>
+            {id}: {counter}
+        </button>
+    );
+});
 
 export class StatefulCounter extends React.Component {
     constructor(props) {
