@@ -19,7 +19,7 @@ export const Counter = connect(
     }
 )(({id, counter, onCounterClick}) => {
     return (
-        <button onClick={onCounterClick}>
+        <button type="button" onClick={onCounterClick}>
             {id}: {counter}
         </button>
     );
@@ -34,7 +34,7 @@ export class StatefulCounter extends React.Component {
 
     render() {
         return (
-            <button onClick={this.incrementCounter}>
+            <button type="button" onClick={this.incrementCounter}>
                 stateful counter: {this.state.count}
             </button>
         );
