@@ -5,9 +5,8 @@ import Data.Tuple (Tuple(..))
 import Prelude hiding (div)
 import Pux (EffModel)
 import Pux.DOM.HTML (HTML)
-import Text.Smolder.HTML (div, button)
-import Text.Smolder.HTML.Attributes (keytype)
-import Text.Smolder.Markup (text, (!))
+import Text.Smolder.HTML (div)
+import Text.Smolder.Markup (text)
 
 type Event = Counter.Event
 
@@ -24,4 +23,4 @@ app s =
         Counter.counter s.counter "unique"
         Counter.counter s.counter "duplicated"
         Counter.counter s.counter "duplicated"
-        button ! keytype "button" $ text "stateful counter: Not implemented"
+        Counter.statefulCounter $ text "todo: fix this"
