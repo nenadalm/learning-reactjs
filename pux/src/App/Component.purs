@@ -23,4 +23,4 @@ app s =
         Counter.counter s.counter "unique"
         Counter.counter s.counter "duplicated"
         Counter.counter s.counter "duplicated"
-        Counter.statefulCounter $ text "todo: fix this"
+        Counter.statefulCounter

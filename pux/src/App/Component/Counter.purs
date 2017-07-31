@@ -13,7 +13,7 @@ import React.DOM.Dynamic as D
 import React.DOM.Props as P
 import Text.Smolder.HTML (button)
 import Text.Smolder.HTML.Attributes (type')
-import Text.Smolder.Markup (text, (!), (#!))
+import Text.Smolder.Markup (text, (!), (#!), MarkupM(..))
 
 type State = M.Map String Int
 
@@ -46,5 +46,5 @@ statefulCounter' = R.createClass $ R.spec {count: 0} \ctx -> do
                     ]
                     [ D.text ("stateful counter: " <> show props.count) ]
 
-statefulCounter :: forall e. HTML e -> HTML e
-statefulCounter = reactClass statefulCounter' "statefulCounter"
+statefulCounter :: forall e. HTML e
+statefulCounter = reactClass statefulCounter' "statefulCounter" (Return unit)

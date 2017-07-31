@@ -5,3 +5,5 @@ dist/
 static/dist/
 .psci_modules
 npm-debug.log
+.psc-ide-port
+
